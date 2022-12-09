@@ -5,6 +5,22 @@ from pyrogram.errors import UserAdminInvalid
 
 BAN_YT = []
 
+
+
+
+@client.on(events.NewMessage(pattern="^/start$"))
+async def start(event):
+  await event.reply("**⚡ Mən  𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ\n**𝕏𝔸𝕆𝕊 Federasiyasının Rəsmi Tağ botuyam\n⚡ 𝕏𝔸𝕆𝕊 𝕋𝔸𝔾𝔾𝔼ℝ İlə Qrupunuzdakı Üyələri Etiket Edə Bilərəm\nƏmrlərlə Tanış Olmaq Üçün __ƏMRLƏR__ Butonuna Toxun**",
+                    buttons=(
+                   
+		      [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Tagbot?startgroup=a')],
+                      [Button.url('💬 𝕊𝕆ℍ𝔹𝔼𝕋 ℚℝ𝕌ℙ𝕌𝕄𝕌ℤ', 'https://t.me/bizimBakki ')],    
+		      [Button.url('🇦🇿 𝕆𝕎ℕ𝔼ℝ 👨🏻‍💻', 'https://t.me/sesizKOLGE')],
+		      [Button.inline("⚙ Ə𝕄ℝ𝕃Ə𝕃", data="help")],
+		    ),
+                    link_preview=False
+                   )
+
 @Client.on_message(
 	filters.command("ytban")
 	& filters.group
